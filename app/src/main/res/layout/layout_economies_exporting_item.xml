@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="1px"
+        android:layout_height="72dp"
+        android:background="#D8D8D8"/>
+
+    <TextView
+        android:id="@+id/row_title"
+        style="@style/detail_trend_item_style"
+        android:layout_height="72dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp" />
+
+    <View
+        android:id="@+id/column_divide_line"
+        android:layout_width="1px"
+        android:layout_height="72dp"
+        android:background="#D8D8D8" />
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/row_shares"
+            style="@style/detail_trend_item_style"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical|start"
+            android:maxLines="2"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp" />
+
+        <View
+            android:id="@+id/row_divide_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#D8D8D8" />
+
+        <TextView
+            android:id="@+id/row_value"
+            style="@style/detail_trend_item_style"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical|start"
+            android:maxLines="2"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp" />
+    </LinearLayout>
+    <View
+        android:layout_width="1px"
+        android:layout_height="72dp"
+        android:background="#D8D8D8"/>
+</TableRow>

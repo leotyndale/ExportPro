@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:typeface">sans</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- colorButtonNormal didn't work, because AppTheme is Material3 Theme, not AppCompat-->
+    <style name="ConfirmButtonTheme" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/selector_bg_confirm_button</item>
+        <item name="backgroundTint">@null</item>
+    </style>
+
+    <style name="detail_title_style">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="detail_trend_item_style">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+</resources>

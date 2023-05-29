@@ -1,0 +1,61 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.alibaba.exportinsights'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.alibaba.exportinsights"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    viewBinding {
+        enabled true
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("exportpro.keystore")
+            storePassword 'alibaba'
+            keyAlias 'relase'
+            keyPassword 'alibaba'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "ExportPro_v${variant.versionName}.apk"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation project(path: ':base')
+    implementation project(path: ':imagesearch')
+
+    // GitHub Open Source
+    implementation 'co.lujun:androidtagview:1.1.7'
+    implementation 'com.evrencoskun.library:tableview:0.8.9.4'
+    // https://github.com/PhilJay/MPAndroidChart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+}

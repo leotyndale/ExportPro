@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/floating_layer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dimen_standard_s2"
+        app:cardElevation="0dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/layout_tariff_info_header" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_end="@dimen/dimen_standard_s3"
+                android:id="@+id/right_guideline"
+                android:orientation="vertical"/>
+
+            <!-- product description section-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_percent="0.5"
+                android:layout_marginTop="@dimen/dimen_standard_s6"
+                app:layout_constraintStart_toStartOf="@id/product_img"
+                app:layout_constraintTop_toBottomOf="@+id/product_img"
+                android:maxLines="2"
+                android:textSize="13sp"
+                android:gravity="start"
+                android:text="@string/product_description_title"
+                android:textColor="@color/dark"
+                android:id="@+id/product_description_title"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/product_description_title"
+                app:layout_constraintStart_toEndOf="@id/product_description_title"
+                app:layout_constraintEnd_toEndOf="@id/right_guideline"
+                android:maxLines="3"
+                android:textSize="13sp"
+                android:gravity="end"
+                android:textColor="@color/dark"
+                android:id="@+id/product_description"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dddddd"
+                android:id="@+id/line1"
+                android:importantForAccessibility="no"
+                android:layout_marginTop="@dimen/dimen_standard_s5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_description"
+                android:layout_marginStart="@dimen/dimen_standard_s3"
+                android:layout_marginEnd="@dimen/dimen_standard_s3"/>
+
+            <!-- product unit section-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_percent="0.5"
+                android:layout_marginTop="@dimen/dimen_standard_s5"
+                app:layout_constraintStart_toStartOf="@id/product_description_title"
+                app:layout_constraintTop_toBottomOf="@id/line1"
+                android:maxLines="2"
+                android:textSize="13sp"
+                android:gravity="start"
+                android:text="@string/product_unit_title"
+                android:textColor="@color/dark"
+                android:id="@+id/product_unit_title"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/product_unit_title"
+                app:layout_constraintEnd_toEndOf="@id/right_guideline"
+                android:gravity="end"
+                android:maxLines="3"
+                android:textSize="13sp"
+                android:textColor="@color/dark"
+                android:id="@+id/product_unit"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dddddd"
+                android:id="@+id/line2"
+                android:importantForAccessibility="no"
+                android:layout_marginTop="@dimen/dimen_standard_s5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_unit_title"
+                android:layout_marginStart="@dimen/dimen_standard_s3"
+                android:layout_marginEnd="@dimen/dimen_standard_s3"/>
+
+            <!-- product custom control section-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_percent="0.5"
+                android:layout_marginTop="@dimen/dimen_standard_s5"
+                app:layout_constraintStart_toStartOf="@id/product_unit_title"
+                app:layout_constraintTop_toBottomOf="@id/line2"
+                android:maxLines="2"
+                android:textSize="13sp"
+                android:gravity="start"
+                android:text="@string/customs_control_conditions_title"
+                android:textColor="@color/dark"
+                android:id="@+id/customs_control_conditions_title"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/customs_control_conditions_title"
+                app:layout_constraintTop_toTopOf="@id/customs_control_conditions_title"
+                app:layout_constraintEnd_toEndOf="@id/right_guideline"
+                android:layout_marginStart="@dimen/dimen_standard_s3"
+                android:maxLines="3"
+                android:textSize="13sp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:textColor="@color/dark"
+                android:id="@+id/customs_control_conditions"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dddddd"
+                android:id="@+id/line3"
+                android:importantForAccessibility="no"
+                android:layout_marginTop="@dimen/dimen_standard_s5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/customs_control_conditions"
+                android:layout_marginStart="@dimen/dimen_standard_s3"
+                android:layout_marginEnd="@dimen/dimen_standard_s3"/>
+
+            <!-- product export tax section-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_percent="0.5"
+                android:layout_marginTop="@dimen/dimen_standard_s5"
+                app:layout_constraintStart_toStartOf="@id/customs_control_conditions_title"
+                app:layout_constraintTop_toBottomOf="@id/line3"
+                android:maxLines="2"
+                android:textSize="13sp"
+                android:gravity="start"
+                android:text="@string/export_tax_rebate_rate_title"
+                android:textColor="@color/dark"
+                android:id="@+id/export_tax_rebate_rate_title"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/export_tax_rebate_rate_title"
+                app:layout_constraintEnd_toEndOf="@id/right_guideline"
+                android:maxLines="3"
+                android:gravity="end"
+                android:textSize="13sp"
+                android:textColor="@color/dark"
+                android:id="@+id/export_tax_rebate_rate"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:id="@+id/line4"
+                android:importantForAccessibility="no"
+                android:layout_marginTop="@dimen/dimen_standard_s5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/export_tax_rebate_rate_title"
+                android:layout_marginStart="@dimen/dimen_standard_s3"
+                android:layout_marginEnd="@dimen/dimen_standard_s3"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <include layout="@layout/layout_tariff_subtitle" />
+</LinearLayout>
+

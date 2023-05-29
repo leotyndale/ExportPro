@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="questionnaire_option_min_height">40dp</dimen>
+    <dimen name="dimen_standard_s1">4dp</dimen>
+    <dimen name="dimen_standard_s2">8dp</dimen>
+    <dimen name="dimen_standard_s3">12dp</dimen>
+    <dimen name="dimen_standard_s4">16dp</dimen>
+    <dimen name="dimen_standard_s5">20dp</dimen>
+    <dimen name="dimen_standard_s6">32dp</dimen>
+    <dimen name="dimen_standard_s7">48dp</dimen>
+    <dimen name="dimen_standard_s8">72dp</dimen>
+</resources>

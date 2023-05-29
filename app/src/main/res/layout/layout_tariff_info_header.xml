@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/layout_tariff_info">
+    <!-- product image-->
+    <ImageView
+        android:id="@+id/product_img"
+        android:layout_width="@dimen/dimen_standard_s8"
+        android:layout_height="@dimen/dimen_standard_s8"
+        android:layout_marginStart="@dimen/dimen_standard_s3"
+        android:layout_marginTop="@dimen/dimen_standard_s3"
+        android:layout_marginBottom="@dimen/dimen_standard_s3"
+        android:contentDescription="@string/product_image_description"
+        android:src="@drawable/selector_bg_confirm_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- product title-->
+    <TextView
+        android:id="@+id/product_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_standard_s3"
+        android:layout_marginEnd="@dimen/dimen_standard_s3"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/dark"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/product_img"
+        app:layout_constraintTop_toTopOf="@id/product_img" />
+
+    <TextView
+        android:id="@+id/hs_code_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_standard_s2"
+        android:text="@string/hs_code_title"
+        android:textColor="@color/dark"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@id/product_title"
+        app:layout_constraintTop_toBottomOf="@id/product_title" />
+
+    <TextView
+        android:id="@+id/search_hs_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_standard_s1"
+        android:layout_marginEnd="@dimen/dimen_standard_s3"
+        android:textColor="@color/dark"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@id/hs_code_title"
+        app:layout_constraintTop_toTopOf="@id/hs_code_title" />
+</merge>

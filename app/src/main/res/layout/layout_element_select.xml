@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/element_select_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/element_select_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:liftOnScroll="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/element_select_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@string/select_specifics" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_standard_s5"
+                android:layout_marginEnd="@dimen/dimen_standard_s5"
+                android:layout_marginTop="@dimen/dimen_standard_s5"
+                android:id="@+id/tag_tips"/>
+
+            <co.lujun.androidtagview.TagContainerLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:paddingStart="@dimen/dimen_standard_s5"
+                android:paddingEnd="@dimen/dimen_standard_s5"
+                android:paddingTop="@dimen/dimen_standard_s3"
+                android:id="@+id/tag_container_layout"
+                app:container_enable_drag="false"
+                app:horizontal_interval="10dp"
+                app:vertical_interval="10dp"
+                app:tag_clickable="true"
+                app:tag_selectable="true"
+                app:tag_enable_cross="true"
+                app:tag_theme="none"
+                app:tag_border_width="1dp"
+                app:tag_border_color="@color/dark"
+                app:tag_background_color="@color/light"
+                app:container_border_color="@android:color/transparent"
+                app:container_background_color="@android:color/transparent"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/dimen_standard_s5"
+                android:contentDescription="@null"
+                android:id="@+id/dividing_line"
+                android:background="#dddddd"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionnaire_recycler_view"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_standard_s7"
+            style="@style/ConfirmButtonTheme"
+            android:layout_gravity="bottom"
+            android:textAllCaps="false"
+            android:enabled="false"
+            android:layout_marginBottom="@dimen/dimen_standard_s4"
+            android:layout_marginStart="@dimen/dimen_standard_s5"
+            android:layout_marginEnd="@dimen/dimen_standard_s5"
+            android:text="@string/confirm"
+            android:contentDescription="@string/confirm"
+            android:id="@+id/confirm_button"/>
+
+        <!-- transparent view for modal progress bar, default true -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/transparent_view"
+            android:contentDescription="@null"
+            android:focusableInTouchMode="false"
+            android:visibility="visible"/>
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/circle_progress_bar"
+            android:contentDescription="@string/progress_indicator_description"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

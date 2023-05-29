@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:showIn="@layout/layout_tariff_info">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_standard_s6"
+        android:textSize="16sp"
+        android:text="@string/economies_analysis"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        android:id="@+id/economies_analysis" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_standard_s1"
+        android:layout_marginEnd="@dimen/dimen_standard_s3"
+        android:textSize="13sp"
+        android:text="@string/ranked_by_local_market_shares"
+        android:textColor="@color/dark"
+        android:id="@+id/ranked_by_local_market_shares" />
+</merge>

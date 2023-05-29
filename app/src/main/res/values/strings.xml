@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">ExportPro</string>
+    <string name="image_search_ImageSearch">Image search</string>
+    <string name="cat_searchbar_hint" description="Search bar hint [CHAR_LIMIT=40]" tools:ignore="TypographyQuotes">Enter product keywords</string>
+    <string name="recent_searches">Recent searches</string>
+    <string name="popular_searches">Popular searches</string>
+
+    <string name="insights_title">Find export insights \n for your product</string>
+    <string name="select_specifics">Narrow down specifics</string>
+    <string name="product_analysis">Product analysis</string>
+    <string name="tag_tips">Select the options that best match \""%s"\"</string>
+    <string name="confirm">Show result</string>
+    <string name="hs_code_title">HS code:</string>
+    <string name="product_description_title">Product description</string>
+    <string name="product_unit_title">Unit of Measurement</string>
+    <string name="customs_control_conditions_title">Customs control conditions</string>
+    <string name="export_tax_rebate_rate_title">Export tax rebate rate</string>
+    <string name="view_details">View details</string>
+    <string name="percentage_of_global_imports_title">Percentage of global imports</string>
+    <string name="tariff_rate_title">Tariff rate</string>
+    <string name="annual_imports_title">Annual imports</string>
+    <string name="economies_analysis">Import demand analysis</string>
+    <string name="ranked_by_local_market_shares">Ranked by percentage of global imports</string>
+    <string name="local_market_shares">Local market shares</string>
+    <string name="latest_transaction">Latest transaction</string>
+    <string name="market_snapshot">Market snapshot</string>
+    <string name="market_snapshot_subtitle">Data taken from Australian Bureau of Statistics</string>
+    <string name="economies">Economies</string>
+    <string name="data_updated_time">Data updated in 2022</string>
+    <string name="major_export_region">Major economies exporting this product to %s</string>
+    <string name="top_importer_region">Top local importers in %s</string>
+    <string name="hs_code_value">HS code: %s</string>
+    <string name="relate_search_tip">%d product names related to \""%s"\"</string>
+    <string name="trade_insights">Trade insights</string>
+
+    <string name="product_image_description">product image</string>
+    <string name="progress_indicator_description">loading data, please wait</string>
+    <string name="country_global_description">change country</string>
+</resources>
