@@ -27,7 +27,9 @@
             android:id="@+id/icon"
             android:layout_width="42dp"
             android:layout_height="42dp"
-            android:contentDescription="@string/product_image_description" />
+            android:background="@drawable/ic_border"
+            android:contentDescription="@string/product_image_description"
+            android:padding="2dp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -60,9 +62,9 @@
                 android:id="@+id/chat_icon"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:layout_marginTop="3dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
+                android:layout_marginTop="3dp"
                 android:src="@drawable/chat_icon" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
